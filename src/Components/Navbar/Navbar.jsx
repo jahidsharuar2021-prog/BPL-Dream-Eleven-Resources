@@ -1,16 +1,18 @@
 import React from 'react';
 import dollerImg from "../../assets/Currency.png"
+import logo from "../../assets/logo.png"
 
-const Navbar = () => {
+const Navbar = ({coin}) => {
+  // console.log(coin);
     return (
-      <div>
+      <div className="max-w-7xl mx-auto">
         <div className="navbar bg-base-100 shadow-sm">
           <div className="flex-1">
-            <a className="btn btn-ghost text-xl">daisyUI</a>
+            <img src={logo} alt="" />
           </div>
           <div className="flex-none">
             <button className="flex justify-between btn  font-bold text-xl ">
-                0 Coins
+             {coin}
               <img src={dollerImg} alt="" />
             </button>
           </div>

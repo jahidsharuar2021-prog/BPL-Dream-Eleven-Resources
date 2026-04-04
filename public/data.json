@@ -6,7 +6,7 @@
     "rating": 95,
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm medium",
-    "price": 1500000,
+    "price": 500,
     "playerImage": "https://i.ibb.co.com/R4MCYBpQ/images.webp"
   },
   {
@@ -16,8 +16,8 @@
     "rating": 92,
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm offbreak",
-    "price": 1400000,
-    "playerImage": "https://example.com/images/babar_azam.jpg"
+    "price": 1400,
+    "playerImage": "https://i.ibb.co.com/R4MCYBpQ/images.webp"
   },
   {
     "playerName": "Ben Stokes",
@@ -26,8 +26,8 @@
     "rating": 90,
     "battingStyle": "Left-hand bat",
     "bowlingStyle": "Right-arm fast-medium",
-    "price": 1450000,
-    "playerImage": "https://example.com/images/ben_stokes.jpg"
+    "price": 1450,
+    "playerImage": "https://i.ibb.co.com/R4MCYBpQ/images.webp"
   },
   {
     "playerName": "Kane Williamson",
@@ -36,8 +36,18 @@
     "rating": 91,
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm offbreak",
-    "price": 1350000,
-    "playerImage": "https://example.com/images/kane_williamson.jpg"
+    "price": 500,
+    "playerImage": "https://i.ibb.co.com/R4MCYBpQ/images.webp"
+  },
+  {
+    "playerName": "Sakib Khan",
+    "playerCountry": "Bangladesh",
+    "playerType": "Batsman",
+    "rating": 91,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak",
+    "price": 2100,
+    "playerImage": "https://i.ibb.co.com/R4MCYBpQ/images.webp"
   },
   {
     "playerName": "Rashid Khan",
@@ -46,7 +56,7 @@
     "rating": 89,
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm legbreak googly",
-    "price": 1300000,
-    "playerImage": "https://example.com/images/rashid_khan.jpg"
+    "price": 130000,
+    "playerImage": "https://i.ibb.co.com/R4MCYBpQ/images.webp"
   }
 ]
