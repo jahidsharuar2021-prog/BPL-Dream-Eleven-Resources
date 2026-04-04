@@ -9,7 +9,7 @@ const Navbar = () => {
             <a className="btn btn-ghost text-xl">daisyUI</a>
           </div>
           <div className="flex-none">
-            <button className="flex justify-between btn  ">
+            <button className="flex justify-between btn  font-bold text-xl ">
                 0 Coins
               <img src={dollerImg} alt="" />
             </button>
