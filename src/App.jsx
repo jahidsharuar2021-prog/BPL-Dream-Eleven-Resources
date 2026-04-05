@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Player from "./Components/Homepage/AviablePlayers/Selected/Player";
 import Poster from "./Components/Navbar/Poster";
+import { ToastContainer } from "react-toastify";
 
 const fetchPlayers = async () => {
   const res = await fetch("/data.json");
@@ -13,8 +14,7 @@ function App() {
   const playerData = fetchPlayers();
   const [coin, setCoin] = useState(50000);
 
-  const [selectedPlayers, setSelectedPlayer] = useState([]);
-  console.log(selectedPlayers);
+ 
 
   return (
     <>
@@ -24,17 +24,13 @@ function App() {
         <Suspense
           fallback={<span className="loading loading-dots loading-xl"></span>}
         >
-          <Player
-            selectedPlayers={selectedPlayers}
-            coin={coin}
-            playerData={playerData}
-            setCoin={setCoin}
-          >
+          <Player coin={coin} playerData={playerData} setCoin={setCoin}>
             {" "}
             Player
           </Player>
         </Suspense>
       </div>
+      <ToastContainer />
     </>
   );
 }

@@ -3,12 +3,12 @@ import AviablePlayers from "../AviablePlayers";
 import { Ghost } from "lucide-react";
 import Selected from "../Selected";
 
-const Player = ({ playerData, setCoin, coin, selectedPlayers }) => {
+const Player = ({ playerData, setCoin, coin }) => {
   const players = use(playerData);
 
   const [selectedType, setSelectedType] = useState("avilable");
-  // console.log("selected:", selectedType);
-  // console.log(selectedPlayers);
+   const [selectedPlayers, setSelectedPlayer] = useState([]);
+   console.log("tesing=",selectedPlayers);
 
   return (
     <>
@@ -17,7 +17,10 @@ const Player = ({ playerData, setCoin, coin, selectedPlayers }) => {
           {selectedType == "avilable" ? (
             <h1 className="font-bold text-2xl"> Avilable Players</h1>
           ) : (
-            <h1 className="font-bold text-2xl"> Selected Players</h1>
+            <h1 className="font-bold text-2xl">
+              {" "}
+              Selected Players({selectedPlayers.length}/{players.length})
+            </h1>
           )}
 
           <div className="flex gap-2">
@@ -31,17 +34,30 @@ const Player = ({ playerData, setCoin, coin, selectedPlayers }) => {
               onClick={() => setSelectedType("selected")}
               className={`btn ${selectedType == "selected" ? "btn-accent" : "bg-amber-00"} `}
             >
-              Selected (0)
+              Selected ({selectedPlayers.length})
             </button>
           </div>
         </div>
 
         {selectedType == "avilable" ? (
-          <AviablePlayers players={players} coin={coin} setCoin={setCoin}>
+          <AviablePlayers
+            selectedPlayers={selectedPlayers}
+            setSelectedPlayer={setSelectedPlayer}
+            players={players}
+            coin={coin}
+            setCoin={setCoin}
+          >
             {" "}
           </AviablePlayers>
         ) : (
-          <Selected selectedPlayers={selectedPlayers}> </Selected>
+          <Selected
+            selectedPlayers={selectedPlayers}
+            setSelectedPlayer={setSelectedPlayer}
+            coin={coin}
+            setCoin={setCoin}
+          >
+            {" "}
+          </Selected>
         )}
       </div>
     </>
